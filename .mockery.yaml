@@ -1,0 +1,17 @@
+dir: mocks
+filename: '{{.InterfaceName}}.go'
+structname: '{{.InterfaceName}}'
+pkgname: mocks
+formatter: goimports
+log-level: info
+packages:
+  # This is how you mock interfaces from within the repo
+  github.com/tahardi/go-template/internal:
+    config:
+    interfaces:
+      ToDo:
+  # This is how you mock interfaces from stdlib
+  net/http:
+    config:
+    interfaces:
+      RoundTripper:
